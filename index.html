@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hopin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+
+
+</head>
+
+<script type="text/javascript">
+  $(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+</script>
+
+<style type="text/css">
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css";
+
+/* .navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
+.navbar-fixed-top.scrolled .nav-link, .navbar-fixed-top.scrolled .nav-item.dropdown {
+  color:#555;
+} */
+</style>
+
+<body>
+
+<div id="mainheader">
+  <nav class="navbar navbar-expand-md ctm-navbar navbar-dark bg-primary navbar-fixed-top" id="navigation" >
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="3" y2="18"/></svg>                        
+    </button>  
+    
+      <a class="navbar-brand" href="#">
+          <img src='./assets/hopin logo.png'>
+        </a>
+        
+      
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="abc">Why Hopin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="abc">Company</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="abc">Customer stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="abc">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="abc">Explore events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="abc">Log in</a>
+            </li>
+          </ul>
+
+          <span>
+            <button type="button" class="btn btn-default">Sign Up Free</button>
+          </span>
+      </div>
+  </nav>
+
+  <!-- <nav class="navbar navbar-expand-sm ctm-navbar navbar-dark bg-primary navbar-fixed-top" id="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+</div>
+
+  <section id="banner">
+    <div class="banner-sec">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="banner-text">
+            <h1>Create virtual events people love</h1>
+            <p>Hopin is an online events platform where you can create engaging virtual events that connect people around the globe.</p>
+            <button type="button" class="btn btn-default">Talk to us</button>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="video-outer">
+            <div class="banner-video">
+              <video autoplay muted loop id="myVideo" controls autoplay>
+                <source src="./assets/intro-video.mp4" type="video/mp4"> 
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ctmsec1">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <img src='./assets/sec1.png' class="image-responsive img1">
+        </div>
+
+        <div class="col-md-6">
+          <h1>Host your most interactive online event yet</h1>
+          <p>Hopin is a virtual venue with multiple interactive areas that are optimized for connecting and engaging. Attendees can move in and out of rooms just like an in-person event and enjoy the content and connections you've created for them. The results? High show-up rates, low drop-off rates, and happy attendees.</p>
+          <div class="ctm-ullist">
+            <p><i class="fa fa-check" aria-hidden="true"></i> Host events of any type or size</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Sell event tickets</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Engage your attendees</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Analyze data from your event</p>
+          </div>
+          <div class="ctm-hr"></div>
+          <div class="img-set">
+            <img src='./assets/tc-disrupt.png' class="image-responsive">
+            <img src='./assets/adobe.svg' class="image-responsive">
+            <img src='./assets/webflow.svg' class="image-responsive">
+            <img src='./assets/magento.svg' class="image-responsive">
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+  <section class="ctmsec2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5">
+          <h1>The first all-in-one event platform optimized for connecting</h1>
+          <p>Organizers can achieve the same goals of their offline events by customizing their Hopin events to fit the requirements, whether it's a 50-person recruiting event, a 500-person all-hands meeting, or a 50,000-person annual conference. Hopin is built knowing every event is unique.</p>
+          <div class="ctm-ullist">
+            <p><i class="fa fa-check" aria-hidden="true"></i> Attend full-fledged live events</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Join hands-on sessions</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Visit expo booths</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Meet 1-on-1</p>
+          </div>
+          <div class="ctm-hr"></div>
+          <div class="img-set">
+            <img src='./assets/techcrunch.svg' class="image-responsive">
+            <img src='./assets/forbes.svg' class="image-responsive">
+            <img src='./assets/Fortune.svg' class="image-responsive">
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="vertical-icon-nav" role="tablist">
+            <a class="nav-item nav-link" data-toggle="tab" href="#tab1" ><i class="fa fa-home"></i></a>
+            <a class="nav-item nav-link active" data-toggle="tab" href="#tab2" ><i class="fa fa-video-camera"></i><span class="video-live">LIVE</span></a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tab3" ><i class="fa fa-users"></i></a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tab4"><i class="fa fa-handshake-o"></i></a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tab5" ><i class="fa fa-building"></i></a>
+          </div>
+
+          <div class="sec2-img">
+            <img src='./assets/sec2.png' class="image-responsive img1">
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+  <section class="ctmsec3">
+    <div class="container">
+      <h1>Build your next event in just minutes</h1>
+      <p>Create awesome event experiences by mixing and matching Hopin’s special event segments.</p>
+      
+      <!-- Tabs -->
+      <section id="tabs">
+        <div class="container">
+          
+          <div class="row">
+            <div class="col-xs-12 ">
+              <nav>
+                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Reception</a>
+                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Stage</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Sessions</a>
+                  <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Network</a>
+                  <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-expo" role="tab" aria-controls="nav-about" aria-selected="false">Expo</a>
+                </div>
+              </nav>
+              <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                <div class="tab-pane  active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div class="tab-img">
+                    <img src='./assets/reception.png'>
+                  </div>
+                </div>
+                <div class="tab-pane " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <div class="tab-img">
+                    <img src='./assets/stage.png'>
+                  </div>
+                </div>
+                <div class="tab-pane " id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                  <div class="tab-img">
+                    <img src='./assets/sessions.png'>
+                  </div>
+                </div>
+                <div class="tab-pane " id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                  <div class="tab-img">
+                    <img src='./assets/networking.png'>
+                  </div>
+                </div>
+                <div class="tab-pane " id="nav-expo" role="tabpanel" aria-labelledby="nav-about-tab">
+                  <div class="tab-img">
+                    <img src='./assets/booth.png'>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ./Tabs -->
+
+    </div>
+  </section>
+
+  <section class="ctmsec4">
+    <div class="container-fluid">
+      <div class="ctm-title">
+        <h1>Discover events on Hopin</h1>
+        <p><a href="#">View all events</a></p>
+      </div>
+
+      <div class="ctm-service">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='./assets/service1.jpg' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='https://quiin.s3.us-east-1.amazonaws.com/events/pictures/000/109/704/large/1500x600_ted.png?1607252824' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='https://quiin.s3.us-east-1.amazonaws.com/events/pictures/000/083/071/large/BANNER-3.png?1604038663' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='https://quiin.s3.us-east-1.amazonaws.com/events/pictures/000/110/522/large/Webinar_Meetup___FB_Banner.png?1609890436' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='./assets/service1.jpg' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='https://quiin.s3.us-east-1.amazonaws.com/events/pictures/000/109/704/large/1500x600_ted.png?1607252824' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='https://quiin.s3.us-east-1.amazonaws.com/events/pictures/000/083/071/large/BANNER-3.png?1604038663' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="service1">
+              <div class="top-img">
+                 <img src='https://quiin.s3.us-east-1.amazonaws.com/events/pictures/000/110/522/large/Webinar_Meetup___FB_Banner.png?1609890436' class="image-responsive">
+              </div>
+              <div class="service-body">
+                <h3>Be the BOSS of Your Career</h3>
+                <div class="service-loc">
+                  <p>Jan 13, 11:30 PM GMT+5:30</p>
+                  <p>$0.00~$2.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ctmsec5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <img src='./assets/sec4.png' class="image-responsive">
+        </div>
+
+        <div class="col-md-6">
+          <div class="ways-sec">
+            <h3>Ways to use Hopin</h3>
+            <p>Create events with unlimited possibilities, and craft your event schedule for a uniquely great experience every time.</p>
+            <button type="button" class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ctmsec6">
+    <div class="container">
+      <h1>Join tens of thousands of organizers hosting<br>creative events on Hopin</h1>
+
+      <div class="sec6 img-group">
+       <img src='./assets/adobe.svg' class="image-responsive">
+       <img src='./assets/Product-Hubnt.svg' class="image-responsive">
+       <img src='./assets/GitLab.svg' class="image-responsive">
+       <img src='./assets/WSJ.svg' class="image-responsive">
+       <img src='./assets/Slack.svg' class="image-responsive">
+       <img src='./assets/Dell.svg' class="image-responsive">
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonials">
+            <img src='./assets/case-logo-2.svg' class="image-responsive">
+            <div class="testi-body">
+              <p>We had up to 1,200 possible registrants and had 1,147 team members register with over 1,100 in attendance.</p>
+              <div class="a-name">
+                <img src='./assets/ava6.png' class="image-responsive">
+                <div class="t-sec">
+                  <p class="a-title">Lauren E. Conway</p>
+                  <p>Sr. Corporate Events Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonials">
+            <img src='./assets/case-logo-sm-5@2x.png' class="image-responsive png1">
+            <div class="testi-body">
+              <p>We had up to 1,200 possible registrants and had 1,147 team members register with over 1,100 in attendance.</p>
+              <div class="a-name">
+                <img src='./assets/ava5.png' class="image-responsive">
+                <div class="t-sec">
+                  <p class="a-title">Lauren E. Conway</p>
+                  <p>Sr. Corporate Events Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonials">
+            <img src='./assets/case-logo-sm-4@2x.png' class="image-responsive png">
+            <div class="testi-body">
+              <p>We had up to 1,200 possible registrants and had 1,147 team members register with over 1,100 in attendance.</p>
+              <div class="a-name">
+                <img src='./assets/ava4.png' class="image-responsive">
+                <div class="t-sec">
+                  <p class="a-title">Lauren E. Conway</p>
+                  <p>Sr. Corporate Events Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-center">
+        <center>
+          <button type="button" class="btn btn-primary">View all Case Studies</button>
+        </center>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ctmsec7 parallax">
+    <div class="parallax-sec">
+      <div class="container-fluid">
+        <div class="para-img">
+          <img src='./assets/footer-banner.png'>
+        </div>
+        <div class="para-cnt">
+          <h3>Moving your event online actually amplifies the value of sponsoring it</h3>
+          <p>Get our free ebook<em>How to Generate 6-Figure Value for Virtual Event Sponsors today.</em></p>
+
+          <div class="para-form">
+            <form class="form-inline" action="/action_page.php">
+              <input type="email" class="form-control" id="email" placeholder="Your email" name="email">
+              <button type="submit" class="btn btn-primary">Send me the ebook</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ctmsec8">
+    <div class="container-fluid">
+      <div class="ctm-footer">
+        <div class="c-name">
+          <img src="https://hopin.com/images/logo-dark.svg">
+          <p>Hopin is the world's leading all-in-one virtual event platform.</p>
+        </div>
+
+        <div class="footer-nav">
+          <p class="title">Product</p>
+          <p><a href="#">Why Hopin</a></p>
+          <p><a href="#">Case Studies</a></p>
+          <p><a href="#">Testimonials</a></p>
+          <p><a href="#">Pricing</a></p>
+          
+        </div>
+
+        <div class="footer-nav">
+          <p class="title">Resources</p>
+          <p><a href="#">Blog</a></p>
+          <p><a href="#">Sponsor Whitepaper</a></p>
+          <p><a href="#">Knowledge base</a></p>
+          <p><a href="#">Pricing</a></p>
+        </div>
+
+        <div class="footer-nav">
+          <p class="title">Company</p>
+          <p><a href="#">About Hopin</a></p>
+          <p><a href="#">Our mission</a></p>
+          <p><a href="#">Careers</a></p>
+          <p><a href="#">Press room</a></p>
+        </div>
+
+        <div class="footer-nav newsletter">
+          <p class="title">Get the latest Hopin updates</p>
+          
+          <form class="form-inline" action="/action_page.php">
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </form>
+
+          <div class="social-links">
+            <a href="#" class="s-link" ><i class="fa fa-facebook"></i></a>
+            <a href="#" class="s-link" ><i class="fa fa-twitter"></i></a>
+            <a href="#" class="s-link" ><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ctm-footer1">
+        <ul class="footer-list">
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Community guidelines</a></li>
+                <li><a href="#">Status</a></li>
+              </ul>
+      </div>
+    </div>
+  </section>
+
+  
+</body>
+</html>
